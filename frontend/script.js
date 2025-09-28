@@ -1,7 +1,13 @@
+// Configuración de la URL base del API
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000' 
+  : window.location.origin;
+
 const verComentariosBtn = document.getElementById("verComentariosBtn");
 const listaComentarios = document.getElementById("listaComentarios");
 const opinionForm = document.getElementById("opinionForm");
 const mensajeDiv = document.getElementById("mensaje");
+
 opinionForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   
@@ -16,7 +22,7 @@ opinionForm.addEventListener("submit", async (e) => {
   }
   
   try {
-    const response = await fetch("http://localhost:3000/api/opinion", {
+    const response = await fetch(`${API_BASE_URL}/api/opinion`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -49,7 +55,7 @@ opinionForm.addEventListener("submit", async (e) => {
 
 async function cargarComentarios() {
   try {
-    const response = await fetch("http://localhost:3000/api/opiniones");
+    const response = await fetch(`${API_BASE_URL}/api/opiniones`);
     const opiniones = await response.json();
     listaComentarios.innerHTML = "";
 
