@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajedrez - Estrategia y Pasión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Ajedrez: El Juego de la Mente</h1>
+  </header>
+
+  <section id="tablero">
+    <h2>El Campo de Batalla</h2>
+    <div class="tablero-container">
+      <img src="img/tablero.png" alt="Tablero de ajedrez" class="tablero-img">
+      <div class="tablero-overlay">
+        <p>64 casillas, infinitas posibilidades</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="introduccion">
+    <h2>Introducción al Ajedrez</h2>
+    <div class="card">
+      <p>
+        El ajedrez es un juego de estrategia milenario que enfrenta a dos jugadores 
+        en un tablero de 64 casillas. Cada jugador controla un conjunto de piezas 
+        que se mueven con reglas específicas, y el objetivo es dar jaque mate al 
+        rey del oponente.
+      </p>
+      <p>
+        Más que un simple pasatiempo, el ajedrez es considerado un deporte mental 
+        que estimula la concentración, la planificación y la creatividad. Además, 
+        fomenta la toma de decisiones bajo presión y el pensamiento estratégico, 
+        habilidades muy útiles también fuera del tablero.
+      </p>
+    </div>
+  </section>
+
+  <section id="banner">
+    <div class="carousel">
+      <button class="carousel-btn prev">⟨</button>
+      <div class="carousel-track">
+        <img src="img/rey.png" alt="Rey">
+        <img src="img/reina.png" alt="Reina">
+        <img src="img/torre.png" alt="Torre">
+        <img src="img/alfil.png" alt="Alfil">
+        <img src="img/caballo.png" alt="Caballo">
+        <img src="img/peon.png" alt="Peón">
+      </div>
+      <button class="carousel-btn next">⟩</button>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <h2>¿Por qué jugar ajedrez?</h2>
+    <div class="card">
+      <p>
+        Jugar ajedrez mejora la concentración, la memoria y la capacidad de planificar 
+        a futuro. Cada partida exige analizar posiciones, calcular variantes y prever 
+        los movimientos del rival, lo que entrena la mente para tomar decisiones 
+        acertadas bajo presión.
+      </p>
+      <p>
+        Además, el ajedrez fomenta la paciencia, la disciplina y la creatividad. 
+        Es una herramienta educativa que se utiliza en escuelas de todo el mundo 
+        para fortalecer las habilidades cognitivas y sociales de los estudiantes.
+      </p>
+      <p>
+        Practicarlo con regularidad no solo aporta beneficios intelectuales, sino 
+        también emocionales, ya que enseña a gestionar la derrota, valorar la victoria 
+        y perseverar en la mejora continua.
+      </p>
+    </div>
+  </section>
+
+
+  <section id="formulario">
+    <h2>Comparte tu opinión</h2>
+    <div class="card">
+      <form id="opinionForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="calificacion">Calificación (1 a 5):</label>
+        <input type="number" id="calificacion" name="calificacion" min="1" max="5" required>
+
+        <label for="opinion">Tu opinión:</label>
+        <textarea id="opinion" name="opinion" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="mensaje"></div>
+    </div>
+  </section>
+  
+  <section id="comentarios">
+    <h2>Comentarios de jugadores</h2>
+    <div class="card">
+      <button id="verComentariosBtn">Ver comentarios</button>
+      <ul id="listaComentarios"></ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
